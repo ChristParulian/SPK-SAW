@@ -43,17 +43,66 @@ CREATE TABLE `alternatif` (
 -- Dumping data for table `alternatif`
 --
 
-INSERT INTO `alternatif` (`id_alternatif`, `judul_lagu`, `artis`, `lirik`, `c1_tempo`, `c2_loudness`, `c3_energy`, `c4_valence`, `c5_mode`) VALUES
-(6, 'Surat Cinta', 'Vina Panduwinata', NULL, 120, -5.5, 0.85, 0.92, 1),
-(7, 'Ya Sudahlah', 'Bondan Prakoso', NULL, 140, -4.2, 0.9, 0.88, 1),
-(8, 'Hampa', 'Ari Lasso', NULL, 75, -10, 0.3, 0.25, 0),
-(9, 'Beraksi', 'Kotak', '', 165, -3.5, 0.95, 0.7, 1),
-(10, 'Laskar Pelangi', 'Nidji', NULL, 130, -6.2, 0.88, 0.85, 1),
-(11, 'Manusia Bodoh', 'Ada Band', NULL, 82, -9.5, 0.45, 0.3, 0),
-(12, 'Risalah Hati', 'Dewa 19', NULL, 115, -7.8, 0.65, 0.55, 0),
-(13, 'Melompat Lebih Tinggi', 'Sheila on 7', NULL, 155, -4.8, 0.92, 0.9, 1),
-(14, 'Monokrom', 'Tulus', NULL, 100, -8.5, 0.5, 0.6, 1),
-(15, 'Separuh Aku', 'Noah', NULL, 110, -6.5, 0.75, 0.4, 0);
+INSERT INTO alternatif (judul_lagu, artis, c1_tempo, c2_loudness, c3_energy, c4_valence, c5_mode) VALUES
+-- KELOMPOK HAPPY (High Valence, High Mode)
+('Surat Cinta', 'Vina Panduwinata', 120, -5.5, 0.85, 0.92, 1),
+('Ya Sudahlah', 'Bondan Prakoso', 140, -4.2, 0.90, 0.88, 1),
+('Laskar Pelangi', 'Nidji', 130, -6.2, 0.88, 0.85, 1),
+('I Love U Bibeh', 'The Changcuters', 150, -4.0, 0.92, 0.95, 1),
+('P.U.S.P.A', 'ST12', 125, -5.0, 0.80, 0.90, 1),
+('Cinta Pertama Dan Terakhir', 'Sherina', 110, -7.2, 0.60, 0.80, 1),
+('Teman Bahagia', 'Jaz', 115, -6.0, 0.75, 0.88, 1),
+('Doremi', 'Budi Doremi', 120, -6.5, 0.70, 0.94, 1),
+('Heavy Rotation', 'JKT48', 160, -3.8, 0.95, 0.98, 1),
+('Cantik', 'Kahitna', 118, -6.8, 0.65, 0.85, 1),
+('Selamat Ulang Tahun', 'Jamrud', 128, -4.5, 0.85, 0.90, 1),
+('Kepompong', 'Sind3ntosca', 120, -7.0, 0.60, 0.96, 1),
+
+-- KELOMPOK SEDIH (Low Tempo, Low Valence, Mode 0)
+('Kenangan Terindah', 'Samsons', 80, -9.5, 0.40, 0.25, 0),
+('Hampa', 'Ari Lasso', 75, -10.0, 0.30, 0.20, 0),
+('Manusia Bodoh', 'Ada Band', 82, -9.0, 0.45, 0.30, 0),
+('Aku Terjatuh', 'ST12', 78, -11.0, 0.35, 0.15, 0),
+('Sandiwara Cinta', 'Repvblik', 85, -8.5, 0.50, 0.35, 0),
+('Duka', 'Last Child', 70, -10.5, 0.40, 0.20, 0),
+('Pura-Pura Lupa', 'Mahen', 72, -9.8, 0.38, 0.18, 0),
+('Sial', 'Mahalini', 76, -8.0, 0.55, 0.22, 0),
+('Rumah Ke Rumah', 'Hindia', 90, -9.2, 0.48, 0.40, 0),
+('Separuh Aku', 'Noah', 110, -6.5, 0.75, 0.40, 0),
+('Kangen', 'Dewa 19', 88, -8.8, 0.50, 0.35, 0),
+('Bintang Kehidupan', 'Nike Ardilla', 74, -10.2, 0.42, 0.28, 0),
+
+-- KELOMPOK ENERGETIC (High Tempo, High Energy, Loud)
+('Beraksi', 'Kotak', 165, -3.5, 0.95, 0.70, 1),
+('Melompat Lebih Tinggi', 'Sheila on 7', 155, -4.8, 0.92, 0.90, 1),
+('Bintang Di Surga', 'Peterpan', 145, -5.2, 0.85, 0.60, 0),
+('Meraih Bintang', 'Via Vallen', 135, -4.0, 0.90, 0.85, 1),
+('Sakit Hati', 'Tipe-X', 170, -4.2, 0.96, 0.75, 1),
+('Genit', 'Tipe-X', 168, -3.9, 0.94, 0.80, 1),
+('Topeng', 'Peterpan', 158, -4.5, 0.92, 0.65, 1),
+('C.P.T', 'The Changcuters', 162, -3.8, 0.93, 0.85, 1),
+('Jagoan', 'Sherina', 140, -5.5, 0.80, 0.78, 1),
+('Mawar Hitam', 'Tipe-X', 155, -5.0, 0.88, 0.50, 0),
+
+-- KELOMPOK RELAX / CHILL (Mid Tempo, Low Energy, High Valence)
+('Zona Nyaman', 'Fourtwnty', 105, -8.5, 0.45, 0.75, 1),
+('Akad', 'Payung Teduh', 95, -9.0, 0.40, 0.80, 1),
+('Monokrom', 'Tulus', 100, -8.2, 0.50, 0.65, 1),
+('Selow', 'Wahyu', 92, -8.8, 0.35, 0.90, 1),
+('Fana Merah Jambu', 'Fourtwnty', 98, -9.5, 0.42, 0.70, 1),
+('Aku Tenang', 'Fourtwnty', 85, -11.0, 0.30, 0.78, 1),
+('Reuni', 'Tulus', 110, -7.5, 0.55, 0.82, 1),
+('Rumah', 'Fiersa Besari', 90, -10.0, 0.38, 0.60, 1),
+('April', 'Fiersa Besari', 88, -9.8, 0.35, 0.45, 1),
+('Interaksi', 'Tulus', 102, -8.0, 0.48, 0.72, 1),
+('Bicara', 'Monita Tahalea', 96, -9.0, 0.40, 0.68, 1),
+
+-- KELOMPOK LAINNYA (Marah/Takut di Dataset)
+('Galang Rambu Anarki', 'Iwan Fals', 115, -7.0, 0.60, 0.55, 1),
+('Bohongi Hati', 'Mahalini', 82, -8.5, 0.52, 0.30, 0),
+('Kekasih Bayangan', 'Cakra Khan', 78, -9.2, 0.48, 0.25, 0),
+('Sumpah Ku Mencintaimu', 'Seventeen', 120, -5.8, 0.75, 0.80, 1),
+('Berhenti Berharap', 'Sheila on 7', 95, -8.0, 0.58, 0.35, 0);
 
 -- --------------------------------------------------------
 
